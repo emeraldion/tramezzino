@@ -3,6 +3,14 @@
 namespace tramezzino;
 
 function serialize($r, $b, $d, $a, $n = FALSE) {
+  global $bb;
+  global $dd;
+  global $aa;
+
+  $bb = $b;
+  $dd = $d;
+  $aa = $a;
+
   if ($r === null) {
     return '';
   }
@@ -16,11 +24,11 @@ function serialize($r, $b, $d, $a, $n = FALSE) {
   }
   else {
     $c = array(implode($d, array_map(function($c) {
-      global $b;
-      global $d;
-      global $a;
+      global $bb;
+      global $dd;
+      global $aa;
 
-      return serialize($c, $b, $d, $a, true);
+      return serialize($c, $bb, $dd, $aa, true);
     }, $r['c'])));
 
     if ($n) {

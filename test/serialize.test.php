@@ -32,10 +32,10 @@
 			$this->assertEquals('aria*&nna^', \tramezzino\serialize($FIXTURES['TREES']['ARIA_ANNA'], '*', '&', '^'));
 			$this->assertEquals('aria[+nna]', \tramezzino\serialize($FIXTURES['TREES']['ARIA_ANNA'], '[', '+', ']'));
 			
-			// $this->assertEquals('alb(a|er(go|o|to))', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '(', '|', ')'));
-			// $this->assertEquals('alb*a&er*go&o&to^^', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '*', '&', '^'));
-			// $this->assertEquals('alb~a*er~go*o*to==', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '~', '*', '='));
-			// $this->assertEquals('alb[a+er[go+o+to]]', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '[', '+', ']'));
+			$this->assertEquals('alb(a|er(go|o|to))', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '(', '|', ')'));
+			$this->assertEquals('alb*a&er*go&o&to^^', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '*', '&', '^'));
+			$this->assertEquals('alb~a*er~go*o*to==', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '~', '*', '='));
+			$this->assertEquals('alb[a+er[go+o+to]]', \tramezzino\serialize($FIXTURES['TREES']['ALB_A_ER_GO_O_TO'], '[', '+', ']'));
 			
 			$this->assertEquals('viale(|tto)', \tramezzino\serialize($FIXTURES['TREES']['VIALE_ETTO'], '(', '|', ')'));
 			$this->assertEquals('viale[+tto]', \tramezzino\serialize($FIXTURES['TREES']['VIALE_ETTO'], '[', '+', ']'));
