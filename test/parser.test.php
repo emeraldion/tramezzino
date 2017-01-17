@@ -33,7 +33,7 @@
 		function test_fixtures()
 		{
 			global $FIXTURES;
-			
+
 			$this->assertEquals(\tramezzino\parser($FIXTURES['STRINGS']['ISIN_1'], '(', '|', ')'), $FIXTURES['ARRAYS']['ISIN_1']);
 		}
 	}
