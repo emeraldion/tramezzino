@@ -1,0 +1,15 @@
+{
+    "name": "claudiopro/tramezzino",
+    "description": "Converts a list of strings into a compact, readable representation with delimiters of choice",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claudio Procida",
+            "email": "claudio.procida@gmail.com"
+        }
+    ],
+    "require-dev": {
+      "phpunit/phpunit": "4.8.*"
+    }
+}
