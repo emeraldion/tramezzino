@@ -6,14 +6,16 @@ class Usage {
 
 	static function usage() {
 	    print<<<EOT
-	Usage:
-	tramezzino <string> [<separator> [<child preamble> [<child separator> [<child terminator>]]]]
+Usage:
+	tramezzino.php <string> [<separator> [<child preamble> [<child separator> [<child terminator>]]]]
 
-	Examples:
-	tramezzino 'alba,albero,albino'
+Examples:
+	tramezzino.php 'alba,albero,albino'
 	# => alb(a|ero|ino)
-	tramezzino 'alba:albero:albino' ':' '[' ',' ']'
+
+	tramezzino.php 'alba:albero:albino' ':' '[' ',' ']'
 	# => alb[a,ero,ino]
+
 EOT;
 
 	}

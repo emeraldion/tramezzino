@@ -1,0 +1,32 @@
+#!/usr/bin/php
+<?php
+
+	require_once(__DIR__ . '/src/Args.php');
+	require_once(__DIR__ . '/src/Cover.php');
+	require_once(__DIR__ . '/src/Parser.php');
+	require_once(__DIR__ . '/src/Tramezzino.php');
+	require_once(__DIR__ . '/src/Serializer.php');
+	require_once(__DIR__ . '/src/Usage.php');
+
+	use Emeraldion\Tramezzino\Args;
+	use Emeraldion\Tramezzino\Parser;
+	use Emeraldion\Tramezzino\Tramezzino;
+	use Emeraldion\Tramezzino\Usage;
+
+	if ($argc < 2) {
+		Usage::usage();
+		exit(1);
+	}
+	$args = Args::parse();
+
+	$words = explode($args['separator'], $args['string']);
+
+	$res = Tramezzino::encode(
+		$words,
+		$args['preamble'],
+		$args['delimiter'],
+		$args['terminator']
+	);
+
+	print "$res\n";
+?>

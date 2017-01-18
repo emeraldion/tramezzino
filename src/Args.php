@@ -5,7 +5,9 @@ namespace Emeraldion\Tramezzino;
 class Args {
 
 	static function parse() {
-		$i = 2;
+		global $argv;
+
+		$i = 1;
 		$str = $argv[$i++];
 		$s = $argv[$i++];
 		$p = $argv[$i++];
