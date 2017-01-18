@@ -12,15 +12,39 @@ tramezzino.php 'aria:arianna' ':' '[' '+' ']'
 # => aria[+nna]
 ```
 
-# what?
+## What?
 
 In Italian, [tramezzino](https://it.wiktionary.org/wiki/tramezzino) means sandwich. The name hints at the strings being sliced and interleaved with bread, the delimiters. Tramezzino is the PHP port of the Node module [sambo](https://npm.im/sambo).
 
-# why?
+## Why?
 
 Useful when you need to pass long lists of URL params
 
-# license
+## Composer
+
+Add it to your PHP project using [Composer](https://getcomposer.org):
+
+```sh
+composer require emeraldion/tramezzino
+```
+
+Then have it your way:
+
+```php
+<?php
+use Emeraldion\Tramezzino\Tramezzino;
+
+$encoded = Tramezzino::encode(
+	array('alba', 'albero', 'albergo', 'alberto'),
+	'(',
+	'|',
+	')'
+);
+// $encoded == 'alb(a|er(go|o|to))'
+?>
+```
+
+## License
 
 Copyright (c) 2017, Claudio Procida
 
