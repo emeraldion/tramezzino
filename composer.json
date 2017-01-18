@@ -1,5 +1,5 @@
 {
-    "name": "claudiopro/tramezzino",
+    "name": "emeraldion/tramezzino",
     "description": "Converts a list of strings into a compact, readable representation with delimiters of choice",
     "type": "library",
     "license": "MIT",
