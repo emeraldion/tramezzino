@@ -17,6 +17,24 @@
 			$this->assertTrue(is_callable(array('Emeraldion\Tramezzino\Tramezzino', 'decode')));
 		}
 
+		function test_mutation()
+		{
+			global $FIXTURES;
+
+			// It doesn't mutate the input array
+			$reversed1 = $reversed2 = $FIXTURES['ARRAYS']['ALBERO_FIORE'];
+			rsort($reversed1);
+			rsort($reversed2);
+			Tramezzino::encode($reversed2, '(', '|', ')');
+			$this->assertEquals($reversed1, $reversed2);
+
+			$reversed1 = $reversed2 = $FIXTURES['ARRAYS']['ALB_A_ER_GO_O_TO'];
+			rsort($reversed1);
+			rsort($reversed2);
+			Tramezzino::encode($reversed2, '(', '|', ')');
+			$this->assertEquals($reversed1, $reversed2);
+		}
+
 		function test_single_element()
 		{
 			// It should return the string unaltered if the array has a single element

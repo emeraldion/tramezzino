@@ -14,7 +14,7 @@ tramezzino.php 'aria:arianna' ':' '[' '+' ']'
 
 ## What?
 
-In Italian, [tramezzino](https://it.wiktionary.org/wiki/tramezzino) means sandwich. The name hints at the strings being sliced and interleaved with bread, the delimiters. Tramezzino is the PHP port of the Node module [sambo](https://npm.im/sambo).
+In Italian, [tramezzino](https://it.wiktionary.org/wiki/tramezzino) means sandwich. The name hints at the strings being sliced and interleaved with bread, the delimiters. Tramezzino is the PHP port of the Node module [sarnie](https://npm.im/sarnie).
 
 ## Why?
 
