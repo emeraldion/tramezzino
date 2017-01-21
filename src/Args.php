@@ -8,11 +8,11 @@ class Args {
 		global $argv;
 
 		$i = 1;
-		$str = $argv[$i++];
-		$s = $argv[$i++];
-		$p = $argv[$i++];
-		$d = $argv[$i++];
-		$t = $argv[$i++];
+		$str = @$argv[$i++];
+		$s = @$argv[$i++];
+		$p = @$argv[$i++];
+		$d = @$argv[$i++];
+		$t = @$argv[$i++];
 
 		$s = isset($s) ? $s : ',';
 		$p = isset($p) ? $p : '(';
