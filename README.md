@@ -1,4 +1,8 @@
 [![Build Status](https://travis-ci.org/emeraldion/tramezzino.svg?branch=master)](https://travis-ci.org/emeraldion/tramezzino)
+[![Latest Unstable Version](https://poser.pugx.org/emeraldion/tramezzino/v/unstable)](https://packagist.org/packages/emeraldion/tramezzino)
+[![composer.lock](https://poser.pugx.org/emeraldion/tramezzino/composerlock)](https://packagist.org/packages/emeraldion/tramezzino)
+[![Total Downloads](https://poser.pugx.org/emeraldion/tramezzino/downloads)](https://packagist.org/packages/emeraldion/tramezzino)
+[![Monthly Downloads](https://poser.pugx.org/emeraldion/tramezzino/d/monthly)](https://packagist.org/packages/emeraldion/tramezzino)
 
 # tramezzino
 
@@ -46,6 +50,6 @@ $encoded = Tramezzino::encode(
 
 ## License
 
-Copyright (c) 2017, Claudio Procida
-
 [MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017, Claudio Procida
