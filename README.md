@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/emeraldion/tramezzino.svg?branch=master)](https://travis-ci.org/emeraldion/tramezzino)
+[![Coverage Status](https://coveralls.io/repos/github/emeraldion/tramezzino/badge.svg?branch=master)](https://coveralls.io/github/emeraldion/tramezzino?branch=master)
 [![Latest Unstable Version](https://poser.pugx.org/emeraldion/tramezzino/v/unstable)](https://packagist.org/packages/emeraldion/tramezzino)
 [![composer.lock](https://poser.pugx.org/emeraldion/tramezzino/composerlock)](https://packagist.org/packages/emeraldion/tramezzino)
 [![Total Downloads](https://poser.pugx.org/emeraldion/tramezzino/downloads)](https://packagist.org/packages/emeraldion/tramezzino)
