@@ -5,4 +5,4 @@ update:
 install:
 	composer install
 test: install
-	phpunit --test-suffix=Test.php test --coverage-html coverage
+	phpunit --test-suffix=Test.php test --coverage-html coverage/html --coverage-clover build/logs/clover.xml

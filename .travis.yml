@@ -7,3 +7,6 @@ php:
 - nightly
 
 script: make test
+
+after_success:
+  - travis_retry php vendor/bin/coveralls
