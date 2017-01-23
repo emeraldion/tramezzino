@@ -16,6 +16,11 @@
 			$this->assertTrue(is_callable(array('Emeraldion\Tramezzino\Cover', 'cover')));
 		}
 
+		function test_empty_array()
+		{
+			$this->assertFalse(Cover::cover(array()));
+		}
+
 		function test_bad_input()
 		{
 			$this->assertFalse(Cover::cover(array('a'), 1));

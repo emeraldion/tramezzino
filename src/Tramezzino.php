@@ -7,19 +7,23 @@ use Emeraldion\Tramezzino\Parser;
 use Emeraldion\Tramezzino\Serializer;
 
 class Tramezzino {
-	static function encode($s, $b = '(', $d = '|', $a = ')') {
-		if (!is_array($s)) {
+	static function encode($list, $preamble = '(', $delimiter = '|', $terminator = ')') {
+		if (!is_array($list)) {
 			return NULL;
 		}
-		sort($s);
+		sort($list);
+		$cover = Cover::cover($list);
+		if (!is_array($cover)) {
+			return NULL;
+		}
 		return Serializer::serialize(array(
 			'l' => '',
-			'c' => Cover::cover($s)
-		), $b, $d, $a);
+			'c' => $cover
+		), $preamble, $delimiter, $terminator);
 	}
 
-	static function decode($s, $b = '(', $d = '|', $a = ')') {
-		return Parser::parse($s, $b, $d, $a);
+	static function decode($str, $preamble = '(', $delimiter = '|', $terminator = ')') {
+		return Parser::parse($str, $preamble, $delimiter, $terminator);
 	}
 }
 
