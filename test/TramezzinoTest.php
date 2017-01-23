@@ -11,13 +11,24 @@
 
 	class TramezzinoTest extends \PHPUnit_Framework_TestCase
 	{
-		function test_exists()
+		function test_encode_exists()
 		{
 			$this->assertTrue(is_callable(array('Emeraldion\Tramezzino\Tramezzino', 'encode')));
-			$this->assertTrue(is_callable(array('Emeraldion\Tramezzino\Tramezzino', 'decode')));
 		}
 
-		function test_mutation()
+		function test_encode_empty()
+		{
+			$this->assertEquals('', Tramezzino::encode(array()));
+		}
+
+		function test_encode_bad_data()
+		{
+			$this->assertNull(Tramezzino::encode(NULL));
+			$this->assertNull(Tramezzino::encode(1));
+			$this->assertNull(Tramezzino::encode(TRUE));
+		}
+
+		function test_encode_mutation()
 		{
 			global $FIXTURES;
 
@@ -35,13 +46,13 @@
 			$this->assertEquals($reversed1, $reversed2);
 		}
 
-		function test_single_element()
+		function test_encode_single_element()
 		{
 			// It should return the string unaltered if the array has a single element
 			$this->assertEquals(Tramezzino::encode(array('albero'), '(', '|', ')'), 'albero');
 		}
 
-		function test_no_common_radix()
+		function test_encode_no_common_radix()
 		{
 			global $FIXTURES;
 
@@ -50,7 +61,7 @@
 			$this->assertEquals(Tramezzino::encode($FIXTURES['ARRAYS']['ALBERO_FIORE'], '(', '|', ')'), 'albero|fiore');
 		}
 
-		function test_common_radix()
+		function test_encode_common_radix()
 		{
 			global $FIXTURES;
 
@@ -60,7 +71,7 @@
 			$this->assertEquals(Tramezzino::encode($FIXTURES['ARRAYS']['MARE_INA_IO_IA'], '(', '|', ')'), 'mar(e|i(a|na(|io)|o))');
 		}
 
-		function test_mixed_strings()
+		function test_encode_mixed_strings()
 		{
 			global $FIXTURES;
 
@@ -69,7 +80,7 @@
 			$this->assertEquals(Tramezzino::encode($merged, '(', '|', ')'), 'alb(a|er(go|o|to))|pesc(a(|tore)|h(eria|iera))');
 		}
 
-		function test_scrambled_input()
+		function test_encode_scrambled_input()
 		{
 			global $FIXTURES;
 
@@ -85,12 +96,17 @@
 					  Tramezzino::encode($scrambled, '(', '|', ')'));
 		}
 
-		function test_isin()
+		function test_encode_isin()
 		{
 			global $FIXTURES;
 
 			// A real life example
 			$this->assertEquals(Tramezzino::encode($FIXTURES['ARRAYS']['ISIN_1'], '(', '|', ')'), $FIXTURES['STRINGS']['ISIN_1']);
+		}
+
+		function test_decode_exists()
+		{
+			$this->assertTrue(is_callable(array('Emeraldion\Tramezzino\Tramezzino', 'decode')));
 		}
 	}
 
