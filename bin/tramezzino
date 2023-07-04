@@ -1,12 +1,12 @@
 #!/usr/bin/php
 <?php
 
-	require_once(__DIR__ . '/src/Args.php');
-	require_once(__DIR__ . '/src/Cover.php');
-	require_once(__DIR__ . '/src/Parser.php');
-	require_once(__DIR__ . '/src/Tramezzino.php');
-	require_once(__DIR__ . '/src/Serializer.php');
-	require_once(__DIR__ . '/src/Usage.php');
+	require_once(__DIR__ . '/../src/Args.php');
+	require_once(__DIR__ . '/../src/Cover.php');
+	require_once(__DIR__ . '/../src/Parser.php');
+	require_once(__DIR__ . '/../src/Tramezzino.php');
+	require_once(__DIR__ . '/../src/Serializer.php');
+	require_once(__DIR__ . '/../src/Usage.php');
 
 	use Emeraldion\Tramezzino\Args;
 	use Emeraldion\Tramezzino\Parser;

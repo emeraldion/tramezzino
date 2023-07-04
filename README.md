@@ -1,3 +1,5 @@
+<!-- @format -->
+
 [![Build Status](https://travis-ci.org/emeraldion/tramezzino.svg?branch=master)](https://travis-ci.org/emeraldion/tramezzino)
 [![Coverage Status](https://coveralls.io/repos/github/emeraldion/tramezzino/badge.svg?branch=master)](https://coveralls.io/github/emeraldion/tramezzino?branch=master)
 [![Latest Unstable Version](https://poser.pugx.org/emeraldion/tramezzino/v/unstable)](https://packagist.org/packages/emeraldion/tramezzino)
@@ -39,12 +41,7 @@ Then have it your way:
 <?php
 use Emeraldion\Tramezzino\Tramezzino;
 
-$encoded = Tramezzino::encode(
-	array('alba', 'albero', 'albergo', 'alberto'),
-	'(',
-	'|',
-	')'
-);
+$encoded = Tramezzino::encode(array('alba', 'albero', 'albergo', 'alberto'), '(', '|', ')');
 // $encoded == 'alb(a|er(go|o|to))'
 ?>
 ```
@@ -53,4 +50,4 @@ $encoded = Tramezzino::encode(
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2017, Claudio Procida
+Copyright (c) 2017-2023, Claudio Procida

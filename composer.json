@@ -19,10 +19,10 @@
         "source": "https://github.com/emeraldion/tramezzino"
     },
     "require": {
-        "php": ">=5.6.0",
-        "satooshi/php-coveralls": "^1.0"
+        "php": ">=5.6.0"
     },
     "require-dev": {
+        "satooshi/php-coveralls": "^1.0",
       "phpunit/phpunit": "4.8.*"
     },
     "autoload": {
@@ -34,5 +34,8 @@
         "psr-4": {
             "Emeraldion\\Tramezzino\\Test\\": "test/"
         }
-    }
+    },
+    "bin": [
+        "bin/tramezzino"
+    ]
 }

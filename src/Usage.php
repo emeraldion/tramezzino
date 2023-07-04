@@ -1,11 +1,17 @@
 <?php
+/**
+ * @format
+ */
 
 namespace Emeraldion\Tramezzino;
 
-class Usage {
-
-	static function usage() {
-	    fwrite(STDERR, <<<EOT
+class Usage
+{
+    static function usage()
+    {
+        fwrite(
+            STDERR,
+            <<<EOT
 Usage:
 	tramezzino.php <string> [<separator> [<child preamble> [<child separator> [<child terminator>]]]]
 
@@ -17,9 +23,8 @@ Examples:
 	# => alb[a,ero,ino]
 
 EOT
-);
-
-	}
+        );
+    }
 }
 
 ?>
